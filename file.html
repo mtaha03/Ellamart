@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            height:20vh;
+            width:100%;
+            border:1px solid red;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .lft{
+          position: absolute;
+          left:0;  
+          top:45%;
+        }
+        input{
+            display:none;
+        }
+        .ri8{
+          top:45%;
+          position: absolute;
+          right:0;  
+        }
+        .slider{
+            height:90%;
+            width:94%;
+            border:1px solid;
+            overflow: hidden;
+        }
+        .slides{
+            height:100%;
+            width:200%;
+            display: flex;
+            justify-content:space-around;
+        }
+        .sld{
+            height:100%;
+            width:10%;
+            background-color:rgb(226, 39, 70);
+        }
+            .slides{
+                width:150%;
+            }
+            #right:checked ~ .slider .slides{
+                margin-left:-50%;
+            }
+            #left:checked ~ .slider .slides{
+                margin-left:0;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input id="left" name="sm" type="radio">
+        <label class="lft" for="left">Left</label>
+        <input id="right" name="sm" type="radio">
+        <label class="ri8" for="right">Right</label>
+        <div class="slider">
+            <div class="slides">
+                <div class="sld">1</div>
+                <div class="sld">2</div>
+                <div class="sld">3</div>
+                <div class="sld">4</div>
+                <div class="sld">5</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
